@@ -1,0 +1,4 @@
+*.o
+mjolnir
+tags
+cscope.*
