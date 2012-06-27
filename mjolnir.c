@@ -238,9 +238,9 @@ static int rename_del(char *path)
 	int retval = 0;
 	int i;
 
-	printf("[+] Deleting %s...\n", path);
 
 	if (is_dir(path)) {
+		printf("[+] Deleting %s...\n", path);
 		return rmdir(path);
 	} else {
 		strncpy(new_path, old_path, pathlen+1);	// pathlen+1: copy the '\0' too
