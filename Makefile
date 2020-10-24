@@ -1,4 +1,3 @@
-CC = clang
 CFLAGS = -Wall -Wextra -std=c99 -pedantic -O3
 LDFLAGS = -lm
 OBJECTS = mjolnir.o
@@ -12,8 +11,7 @@ install: release
 	cp $(TARGET) $(PREFIX)/$(TARGET)
 	chmod 755 $(PREFIX)/$(TARGET)
 
+uninstall:
+	rm $(PREFIX)/$(TARGET)
 clean:
-	rm -f *.o *~ core tags $(TARGET)
-
-tags:
-	ctags *
+	rm -f *.o $(TARGET)
